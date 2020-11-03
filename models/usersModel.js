@@ -47,9 +47,9 @@ class UserModel {
         }
     }
 
-    async getAllUsers(){
+   static async getAllUsers(){
         try{
-            const response = await db.any(`SELECT * from users`)
+            const response = await db.any(`SELECT * from users;`)
             return response;
         }catch(error){
             console.error("ERROR: ",error.message);
