@@ -17,6 +17,15 @@ class questionModel {
             return err.message
         }
     }
+
+    static async getJavascript() {
+        try {
+            const response = await db.result("SELECT * FROM questions WHERE category = 'Javascript';");
+            return response;
+        } catch (error) {
+            return error.message
+        }
+    }
 }
 
 module.exports = questionModel;

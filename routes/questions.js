@@ -8,4 +8,9 @@ router.get("/", async (req, res) => {
     res.json(questionsData);
 });
 
+router.get("/javascript", async (req, res) => {
+    const questionsData = await QuestionsModel.getJavascript();
+    res.json(questionsData);
+});
+
 module.exports = router;
