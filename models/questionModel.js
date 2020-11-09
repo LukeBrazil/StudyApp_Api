@@ -11,7 +11,7 @@ class questionModel {
 
     static async getEverything() {
         try {
-            const response = await db.any('SELECT * FROM questions;');
+            const response = await db.result('SELECT * FROM questions;');
             return response;
         } catch (err) {
             return err.message
