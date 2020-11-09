@@ -18,3 +18,5 @@ class questionModel {
         }
     }
 }
+
+module.exports = questionModel;
