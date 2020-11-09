@@ -26,6 +26,24 @@ class questionModel {
             return error.message
         }
     }
+
+    static async getReact() {
+        try {
+            const response = await db.result("SELECT * FROM questions WHERE category = 'React';");
+            return response;
+        } catch (error) {
+            return error.message
+        }
+    }
+
+    static async getJavascript() {
+        try {
+            const response = await db.result("SELECT * FROM questions WHERE category = 'Python';");
+            return response;
+        } catch (error) {
+            return error.message
+        }
+    }
 }
 
 module.exports = questionModel;

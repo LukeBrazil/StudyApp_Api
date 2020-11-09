@@ -13,4 +13,14 @@ router.get("/javascript", async (req, res) => {
     res.json(questionsData);
 });
 
+router.get("/react", async (req, res) => {
+    const questionsData = await QuestionsModel.getReact();
+    res.json(questionsData);
+});
+
+router.get("/python", async (req, res) => {
+    const questionsData = await QuestionsModel.getPython();
+    res.json(questionsData);
+});
+
 module.exports = router;
