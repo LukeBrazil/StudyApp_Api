@@ -36,7 +36,7 @@ class questionModel {
         }
     }
 
-    static async getJavascript() {
+    static async getPython() {
         try {
             const response = await db.result("SELECT * FROM questions WHERE category = 'Python';");
             return response;
