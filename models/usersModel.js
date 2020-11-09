@@ -8,7 +8,7 @@ const bcrypt = require("bcryptjs");
 class UserModel {
     constructor(id, email, password){
         this.id = id;
-        this.email = email ;
+        this.email = email;
         this.password = password;
     }
     //private (instance) method will return tru or false

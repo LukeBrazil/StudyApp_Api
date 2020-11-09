@@ -32,9 +32,4 @@ router.delete('/:id', async (req, res) => {
   res.json(user);
 });
 
-
-
-
-
-
 module.exports = router;
