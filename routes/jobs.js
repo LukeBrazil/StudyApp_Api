@@ -4,7 +4,9 @@ var router = express.Router();
 router.get('/javascript', async (req, res) => {
    await axios.get('https://jobs.github.com/positions.json?description=javascript&location=us')
         .then(response => response.json())
-        const jobsData = response;
+        .then(data => {
+        const jobsData = data;
+        })
         res.json(jobsData)
 
 })
